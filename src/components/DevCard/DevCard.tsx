@@ -161,10 +161,9 @@ function DevCard() {
         w="auto"
         fit="contain"
         style={{
-          // position: "absolute",
-          bottom: 0,
-          right: 0,
-          marginLeft: "auto"
+          marginTop: 18,
+          marginLeft: "auto",
+          opacity: .7
         }}
         fallbackSrc="https://placehold.co/600x400?text=Placeholder"
       />
