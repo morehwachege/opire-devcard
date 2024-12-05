@@ -1,6 +1,4 @@
 import React from "react";
-import { Welcome } from "../components/Welcome/Welcome";
-import { ColorSchemeToggle } from "../components/ColorSchemeToggle/ColorSchemeToggle";
 import DevCard from "../components/DevCard/DevCard";
 import { Center } from "@mantine/core";
 
