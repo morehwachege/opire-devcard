@@ -2,14 +2,14 @@ import React from "react";
 import { Welcome } from "../components/Welcome/Welcome";
 import { ColorSchemeToggle } from "../components/ColorSchemeToggle/ColorSchemeToggle";
 import DevCard from "../components/DevCard/DevCard";
-import 'boxicons'
+import { Center } from "@mantine/core";
 
 export default function HomePage() {
   return (
     <>
-      {/* <Welcome />
-      <ColorSchemeToggle /> */}
-      <DevCard />
+      <Center style={{ height: "100vh", backgroundColor: "#1a1a1a" }}>
+        <DevCard />
+      </Center>
     </>
   );
 }
