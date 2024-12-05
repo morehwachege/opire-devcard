@@ -1,4 +1,4 @@
-import { Avatar, Box, Center, Container, Flex, Group, Image, Text, Title } from '@mantine/core'
+import { Avatar, Box, Container, Flex, Group, Image, Text, Title } from '@mantine/core'
 import React from 'react'
 import profileImage from "../../assets/images/antony-gakuru.jpg";
 import { BiLogoGithub } from "react-icons/bi";
