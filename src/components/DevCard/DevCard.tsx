@@ -1,6 +1,5 @@
 import { Avatar, Box, Container, Flex, Group, Image, Text, Title } from '@mantine/core'
 import React from 'react'
-import profileImage from "../../assets/images/antony-gakuru.jpg";
 import { BiLogoGithub } from "react-icons/bi";
 import { GoGitPullRequest } from "react-icons/go";
 import { FaDollarSign, FaArrowRightLong, FaXTwitter } from "react-icons/fa6";
@@ -11,10 +10,23 @@ import angularIcon from '../../assets/images/repositoryIcons/angular1.png'
 import godotEngine1Icon from '../../assets/images/repositoryIcons/godotengine1.png'
 import quasarFrameworkIcon from '../../assets/images/repositoryIcons/quasarframework1.png'
 import typeOrm from '../../assets/images/repositoryIcons/typeorm.png'
-import { withPrefix } from "gatsby";
-
+import { graphql, useStaticQuery, withPrefix } from 'gatsby';
+import { getSrc } from 'gatsby-plugin-image';
 
 function DevCard() {
+
+  const data = useStaticQuery(graphql`
+    query {
+      antonyImage: file(relativePath: { eq: "antony-gakuru.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FIXED, width: 90, height: 90, placeholder: BLURRED)
+        }
+      }
+    }
+  `);
+  
+  const imageUrl = getSrc(data.antonyImage);
+
   return (
     <Box w="600"
       bd="1px solid #ffffff30"
@@ -62,7 +74,8 @@ function DevCard() {
       <Flex
         gap={'sm'}
         align={'center'}>
-        <Avatar src={withPrefix("../../assets/images/antony-gakuru.jpg")} alt="it's me" radius="xl" w={90} h={90} />
+        {/* <Avatar src={profileImage} alt="it's me" radius="xl" w={90} h={90} /> */}
+        <Avatar src={imageUrl} alt="Antony Gakuru" radius="xl" size={90} />
         <Flex
           align="flex-start"
           wrap={'wrap'}
@@ -93,8 +106,8 @@ function DevCard() {
 
           <Flex direction={"column"} align={"center"} justify={"center"} h={120}>
             <GoGitPullRequest size={26} color="ff972f" />
-            <Text ta="center" style={{ paddingTop: 5 }}>274</Text>
-            <Text ta="center" style={{ whiteSpace: 'nowrap', paddingTop: '10' }} size="xs">
+            <Text c="#ffffffb3" ta="center" style={{ paddingTop: 5 }}>274</Text>
+            <Text c="#ffffffb3" ta="center" style={{ whiteSpace: 'nowrap', paddingTop: '10' }} size="xs">
               Issues Resolved
             </Text>
           </Flex>
@@ -109,8 +122,8 @@ function DevCard() {
 
           <Flex direction={"column"} align={"center"} justify={"center"} h={120}>
             <FaDollarSign size={26} color="#78A55A" />
-            <Text ta="center" style={{ paddingTop: 5 }}>3725</Text>
-            <Text ta="center" style={{ whiteSpace: 'nowrap', paddingTop: '10' }} size="xs">
+            <Text c="#ffffffb3" ta="center" style={{ paddingTop: 5 }}>3725</Text>
+            <Text c="#ffffffb3" ta="center" style={{ whiteSpace: 'nowrap', paddingTop: '10' }} size="xs">
               Money Earned
             </Text>
           </Flex>
@@ -125,8 +138,8 @@ function DevCard() {
 
           <Flex direction={"column"} align={"center"} justify={"center"} h={120}>
             <FaTrophy size={26} color="#D16D6A" />
-            <Text ta="center" style={{ paddingTop: 5 }}>8</Text>
-            <Text ta="center" style={{ whiteSpace: 'nowrap', paddingTop: '10' }} size="xs">
+            <Text c="#ffffffb3" ta="center" style={{ paddingTop: 5 }}>8</Text>
+            <Text c="#ffffffb3" ta="center" style={{ whiteSpace: 'nowrap', paddingTop: '10' }} size="xs">
               Challenges
             </Text>
           </Flex>
@@ -138,7 +151,7 @@ function DevCard() {
           size={'11rem'}
           style={{ borderRadius: 10 }}>
           <Flex direction={"row"} align={"center"} justify={"center"} h={120}>
-            <Text ta="center" style={{ paddingTop: '10' }} size="xs">
+            <Text c="#ffffffb3" ta="center" style={{ paddingTop: '10' }} size="xs">
               Data since December 2024
             </Text>
             <FaArrowRightLong size={26} color="#78A55A" />
@@ -149,7 +162,7 @@ function DevCard() {
       {/* Most recent contributions */}
       <Flex justify={"end"} align={"center"} gap={'xl'} style={{ paddingTop: 20 }}>
         <Flex style={{ paddingRight: 55 }} direction={'column'} >
-          <Text size={"sm"} fw="700">Most Recent Contributions</Text>
+          <Text c="#ffffffb3" size={"sm"} fw="700">Most Recent Contributions</Text>
           <Group style={{ paddingTop: 10 }}>
             <Avatar src={angularIcon} alt="it's me" radius="xl" w={40} h={40} />
             <Avatar src={quasarFrameworkIcon} alt="it's me" radius="xl" w={40} h={40} />
@@ -159,7 +172,7 @@ function DevCard() {
         </Flex>
 
         <Flex gap={'md'} justify={"center"} align={"center"}>
-          <Text size={"xs"} fw="700">Socials</Text>
+          <Text c="#ffffffb3" size={"xs"} fw="700">Socials</Text>
           <FaArrowRightLong size={20} color="#78A55A" />
           <Flex justify={"center"} align={"center"} gap={'xs'}>
             <FaLinkedin size={20} color="#78A55A" />
