@@ -3119,6 +3119,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/gh-pages@npm:^6":
+  version: 6.1.0
+  resolution: "@types/gh-pages@npm:6.1.0"
+  checksum: 10c0/d8bf644822df211accac9cff24fcc0a5155fd715d05bc1698175623f5cde1aff81c302e7e38f7105e0fa0fe7ab24d7009d8dbb875897af669f48e06c3c20484c
+  languageName: node
+  linkType: hard
+
 "@types/glob@npm:*":
   version: 8.1.0
   resolution: "@types/glob@npm:8.1.0"
@@ -4042,7 +4049,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async@npm:^3.2.5":
+"async@npm:^3.2.4, async@npm:^3.2.5":
   version: 3.2.6
   resolution: "async@npm:3.2.6"
   checksum: 10c0/36484bb15ceddf07078688d95e27076379cc2f87b10c03b6dd8a83e89475a3c8df5848859dd06a4c95af1e4c16fc973de0171a77f18ea00be899aca2a4f85e70
@@ -4988,6 +4995,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^11.0.0":
+  version: 11.1.0
+  resolution: "commander@npm:11.1.0"
+  checksum: 10c0/13cc6ac875e48780250f723fb81c1c1178d35c5decb1abb1b628b3177af08a8554e76b2c0f29de72d69eef7c864d12613272a71fabef8047922bc622ab75a179
+  languageName: node
+  linkType: hard
+
 "commander@npm:^2.20.0":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
@@ -5913,6 +5927,13 @@ __metadata:
   version: 1.4.576
   resolution: "electron-to-chromium@npm:1.4.576"
   checksum: 10c0/b0b9e7ba803bf93ffac9cb830ed2b0e0eb07f20066127065f9ab9e08e4e6a5812040e03d76f6ee9bc59e03fb938fd414e83d4883b29111303e9e88633cf2dce4
+  languageName: node
+  linkType: hard
+
+"email-addresses@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "email-addresses@npm:5.0.0"
+  checksum: 10c0/fc8a6f84e378bbe601ce39a3d8d86bc7e4584030ae9eb1938e12943f7fb5207e5fd7ae449cced3bea70968a519ade560d55ca170208c3f1413d7d25d8613a577
   languageName: node
   linkType: hard
 
@@ -7866,6 +7887,24 @@ __metadata:
     call-bind: "npm:^1.0.2"
     get-intrinsic: "npm:^1.1.1"
   checksum: 10c0/23bc3b44c221cdf7669a88230c62f4b9e30393b61eb21ba4400cb3e346801bd8f95fe4330ee78dbae37aecd874646d53e3e76a17a654d0c84c77f6690526d6bb
+  languageName: node
+  linkType: hard
+
+"gh-pages@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "gh-pages@npm:6.2.0"
+  dependencies:
+    async: "npm:^3.2.4"
+    commander: "npm:^11.0.0"
+    email-addresses: "npm:^5.0.0"
+    filenamify: "npm:^4.3.0"
+    find-cache-dir: "npm:^3.3.1"
+    fs-extra: "npm:^11.1.1"
+    globby: "npm:^11.1.0"
+  bin:
+    gh-pages: bin/gh-pages.js
+    gh-pages-clean: bin/gh-pages-clean.js
+  checksum: 10c0/30b996b3a9c3dc00d333b6fb15232b3ddc8628f9f458de871ad237b4e3414e68f5408d7525d82ae4a551e24bd7461f009908e8db7c7031dc7dc51e62e7c18ac0
   languageName: node
   linkType: hard
 
@@ -10109,6 +10148,7 @@ __metadata:
   dependencies:
     "@mantine/core": "npm:7.14.3"
     "@mantine/hooks": "npm:7.14.3"
+    "@types/gh-pages": "npm:^6"
     "@types/node": "npm:^20.11.26"
     "@types/react": "npm:^18.2.65"
     "@types/react-dom": "npm:^18.2.21"
@@ -10118,6 +10158,7 @@ __metadata:
     gatsby-plugin-postcss: "npm:^6.13.1"
     gatsby-plugin-sharp: "npm:^5.14.0"
     gatsby-transformer-sharp: "npm:^5.14.0"
+    gh-pages: "npm:^6.2.0"
     postcss: "npm:^8.4.35"
     postcss-preset-mantine: "npm:1.17.0"
     postcss-simple-vars: "npm:^7.0.1"

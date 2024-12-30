@@ -11,6 +11,7 @@ import angularIcon from '../../assets/images/repositoryIcons/angular1.png'
 import godotEngine1Icon from '../../assets/images/repositoryIcons/godotengine1.png'
 import quasarFrameworkIcon from '../../assets/images/repositoryIcons/quasarframework1.png'
 import typeOrm from '../../assets/images/repositoryIcons/typeorm.png'
+import { withPrefix } from "gatsby";
 
 
 function DevCard() {
@@ -54,14 +55,14 @@ function DevCard() {
         style={{
           position: "absolute",
           bottom: -25,
-          left: -25
+          left: -25,
         }}
-        fallbackSrc="https://placehold.co/600x400?text=Placeholder"
+        fallbackSrc={withPrefix("https://placehold.co/600x400?text=Placeholder")}
       />
       <Flex
         gap={'sm'}
         align={'center'}>
-        <Avatar src={profileImage} alt="it's me" radius="xl" w={90} h={90} />
+        <Avatar src={withPrefix("../../assets/images/antony-gakuru.jpg")} alt="it's me" radius="xl" w={90} h={90} />
         <Flex
           align="flex-start"
           wrap={'wrap'}
