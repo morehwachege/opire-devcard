@@ -15,25 +15,33 @@ import typeOrm from '../../assets/images/repositoryIcons/typeorm.png'
 
 function DevCard() {
   return (
-    <Box w="600" h="400"
+    <Box w="600"
       bd="1px solid #ffffff30"
       bg="#242424"
-      style={{ borderRadius: 10, overflow: "hidden",
+      style={{
+        borderRadius: 10, overflow: "hidden",
         paddingTop: 25,
         paddingLeft: 25,
         paddingRight: 25,
-        paddingBottom: 5 }}
+        paddingBottom: 5
+      }}
       pos={'relative'}>
       <Image
         src={logoMask}
         alt="Rounded Image"
-        h={130}
+        // h={130}
         w="auto"
         fit="contain"
         style={{
           position: "absolute",
           top: -25,
-          right: -25
+          height: 130,
+          right: -25,
+          '@media (max-width: 593px)': {
+            top: -25,
+            right: -25,
+            height: 50,
+        },
         }}
         fallbackSrc="https://placehold.co/600x400?text=Placeholder"
       />
@@ -68,7 +76,13 @@ function DevCard() {
         </Flex>
       </Flex>
 
-      <Group px={2} style={{whiteSpace: 'nowrap'}}>
+      <Group px={2} style={{
+        whiteSpace: 'nowrap',
+        '@media (max-width: 593px)': {
+          flex: 'column',
+          justifyContent: 'flex-start',
+        },
+      }}>
         <Container
           bg='#1a1a1a'
           h={120}
@@ -132,14 +146,14 @@ function DevCard() {
       </Group>
 
       {/* Most recent contributions */}
-      <Flex justify={"end"} align={"center"} gap={'xl'} style={{ paddingTop: 20}}>
-        <Flex style={{paddingRight: 55}} direction={'column'} >
+      <Flex justify={"end"} align={"center"} gap={'xl'} style={{ paddingTop: 20 }}>
+        <Flex style={{ paddingRight: 55 }} direction={'column'} >
           <Text size={"sm"} fw="700">Most Recent Contributions</Text>
-          <Group style={{paddingTop: 10}}>
-          <Avatar src={angularIcon} alt="it's me" radius="xl" w={40} h={40} />
-          <Avatar src={quasarFrameworkIcon} alt="it's me" radius="xl" w={40} h={40} />
-          <Avatar src={typeOrm} alt="it's me" radius="xl" w={40} h={40} />
-          <Avatar src={godotEngine1Icon} alt="it's me" radius="xl" w={40} h={40} />
+          <Group style={{ paddingTop: 10 }}>
+            <Avatar src={angularIcon} alt="it's me" radius="xl" w={40} h={40} />
+            <Avatar src={quasarFrameworkIcon} alt="it's me" radius="xl" w={40} h={40} />
+            <Avatar src={typeOrm} alt="it's me" radius="xl" w={40} h={40} />
+            <Avatar src={godotEngine1Icon} alt="it's me" radius="xl" w={40} h={40} />
           </Group>
         </Flex>
 

@@ -2,6 +2,7 @@
   "name": "my-gatsby-site",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://morehwachege.github.io/opire-devcard",
   "description": "my-gatsby-site",
   "keywords": [
     "gatsby"
@@ -9,6 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
+    "deploy": "gatsby build && gh-pages -d public",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
